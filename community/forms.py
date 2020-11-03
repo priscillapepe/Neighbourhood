@@ -5,23 +5,25 @@ from django.contrib.auth.forms import (UserCreationForm,
                                        PasswordResetForm,
                                        SetPasswordForm
                                        )
+from .models import Neighbourhood,Profile,Post,Business
 
 
 class UserLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
 
-    username = forms.CharField(widget=forms.TextInput(attrs={
-        "class": "input",
-        "type": "text",
-        "placeholder": "enter username"
-    }))
 
-    password = forms.CharField(widget=forms.TextInput(attrs={
-        "class": "input",
-        "type": "password",
-        "placeholder": "enter password"
-    }))
+username = forms.CharField(widget=forms.TextInput(attrs={
+    "class": "input",
+    "type": "text",
+    "placeholder": "enter username"
+}))
+
+password = forms.CharField(widget=forms.TextInput(attrs={
+    "class": "input",
+    "type": "password",
+    "placeholder": "enter password"
+}))
 
 
 class ResetPasswordForm(PasswordResetForm):
@@ -33,28 +35,6 @@ class ResetPasswordForm(PasswordResetForm):
         "type": "email",
         "placeholder": "enter email-id"
     }))
-
-
-class NewPasswordForm(SetPasswordForm):
-    def __init__(self, *args, **kwargs):
-        super(NewPasswordForm, self).__init__(*args, **kwargs)
-
-    
-    new_password1 = forms.CharField(
-        widget=forms.PasswordInput(attrs={
-            'class': "input",
-            "type": "password",
-            'autocomplete': 'new-password'
-    }))
-
-    new_password2 = forms.CharField(
-        strip=False,
-        widget=forms.PasswordInput(attrs={
-            'class': "input",
-            "type": "password",
-            'autocomplete': 'new-password'
-    }))
-
 
 class UserRegistrationForm(UserCreationForm):
 
@@ -85,3 +65,20 @@ class UserRegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', "password2"]
+
+class NeighbourHoodForm(forms.ModelForm):
+    class Meta:
+        model = Neighbourhood
+        exclude = ('admin',)
+
+
+class BusinessForm(forms.ModelForm):
+    class Meta:
+        model = Business
+        exclude = ('user', 'neighbourhood')
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        exclude = ('user', 'hood')
