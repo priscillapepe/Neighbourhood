@@ -1,1 +1,1 @@
-web: hood.wsgi
+web: neighbourhood.wsgi
