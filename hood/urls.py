@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.contrib.auth import views
-from community.views import signup
-from community.forms import UserCreationForm, UserLoginForm, ResetPasswordForm, NewPasswordForm
+from community.views import home,signup
+from community.forms import UserLoginForm, ResetPasswordForm
 
 
 urlpatterns = [
@@ -28,7 +28,6 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(), name="logout"),
     path('password-reset/', views.PasswordResetView.as_view(template_name="reset_password.html", form_class=ResetPasswordForm), name="password_reset"),
     path('password-reset/done/', views.PasswordResetDoneView.as_view(template_name="reset_password_done.html"), name="password_reset_done"),
-    path('password-reset-confirm/<uidb64>/<token>/', views.PasswordResetConfirmView.as_view(template_name="reset_password_confirm.html", form_class=NewPasswordForm), name="password_reset_confirm"),
     path('password-reset-complete/', views.PasswordResetCompleteView.as_view(template_name="reset_password_complete.html"), name="password_reset_complete"),
 ]
 
