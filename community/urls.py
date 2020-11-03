@@ -12,7 +12,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('town/', views.town, name='town'),
     path('mshomo/', views.index, name='mshomo'),
-    path('user/(?P<username>\)', views.profile, name='profile'),
+    path('user/', views.profile, name='profile'),
     path('upload/', views.upload_post, name='upload_post'),
     path('accounts/edit/', views.edit_profile, name='edit_profile'),
 ]
