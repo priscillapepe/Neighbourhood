@@ -49,7 +49,7 @@
               <strong>Logout</strong>
             </a>
             {% else %}
-            <a href="{% url 'signup' %}" class="button is-success mr-2">
+            <a href="{% url 'signup' %}" class="button is-danger">
               <strong>Sign up</strong>
             </a>
             <a href="{% url 'login' %}" class="button is-light">
@@ -79,7 +79,7 @@
             <div class="face front">
               <div class="card-up">
                 <img class="card-img-top" src="https://images.unsplash.com/photo-1587917998402-c8ddc8d84b5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"
-                  alt="Image with a photo of clouds.">
+                  alt="">
               </div>
               <br>
 
@@ -90,7 +90,7 @@
               <h5>Be where you want to be.....</h5>
               <div class="card-body">
                 <div class="text-center">
-                  <h6 style="color:blue;">TRegister here...!</h6>
+                  <h6 style="color:blue;">Register here...!</h6>
                   <a href="{% url 'signup' %}" class="btn btn-default btn-rounded">REGISTER</a>
                 </div>
               </div>
@@ -105,7 +105,7 @@
     <div class="row"
       style="background-image: url('https://images.unsplash.com/photo-1505148359496-35d8d1ec9645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80'); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
       <div class="welcome" style="height: 300px;text-align: center;margin:0 auto;">
-        <h1 style="font-size: 60px; color: white;">MyNeighbourhood</h1>
+        <h1 style="font-size: 60px; color: white;">About MyNeighbourhood</h1>
         <br>
         <img src="http://cdn1.kabbalah.com/kabbalah.com/images/articles/16-8-4-karen-berg-the-power-of-togetherness.jpg"
           width="150" height="150" class="rounded-circle" style="border-radius:100%;" alt="avatar">
@@ -118,15 +118,55 @@
           within a larger city, town,
           suburb or rural area.
           Neighbourhoods are often social communities with considerable
-          face-to-face interaction among members.
+          face-to-face interaction among members.Here within our neighbourhood community we are willing to make 
+          things much better since,we would always like to know what happes around us like,who has moved in,
+          moved out,sickling,death e.t.c
+          If we come together we will achieve more!!
         </h3>
       </div>
     </div>
-
-    <br>
-    <br>
-
-
+    <br><br>
+    
+    <div class="row">
+      <div class="col-md-4">
+      <div class="card card-image" style="background-image: url(https://images.unsplash.com/photo-1507083730931-b74c36c0893c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
+        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+          <div>
+            <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Town</h5>
+            <h3 class="card-title pt-2"><strong>Town</strong></h3>
+            <p>It is the center of all the neighbourhoods around,where all the hoods meet and discuss and exploit new ideas.</p>
+            <a href="town.html" class="btn btn-pink"><i class="fas fa-clone left"></i>Join</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="col-md-4">
+        <div class="card card-image" style="background-image: url(https://images.unsplash.com/photo-1519678767534-29483894b34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h5 class="pink-text"><i class="fas fa-chart-pie"></i>Kitee</h5>
+              <h3 class="card-title pt-2"><strong>Kitee</strong></h3>
+              <p>Kitee is locacted 200km off road,here all neighbourhoods have unity in that when anythinga happens ,they let you know.</p>
+              <a href="index.html" class="btn btn-pink"><i class="fas fa-clone left"></i>Join</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="col-md-4">
+          <div class="card card-image" style="background-image: url(https://images.unsplash.com/photo-1519678767534-29483894b34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
+            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+              <div>
+                <h5 class="pink-text"><i class="fas fa-chart-pie"></i>Mshomo</h5>
+                <h3 class="card-title pt-2"><strong>Mshomo</strong></h3>
+                <p>The Mshomo Neighbourhood has a great deal of good neighbours who are willing and able to help out.</p>
+                <a href="mshomo.html" class="btn btn-pink"><i class="fas fa-clone left"></i>Join</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
     <br>
     <br>
     <div class="row"
@@ -134,13 +174,13 @@
       <div class="welcome" style="height: 300px;text-align: center;margin:0 auto;">
         <br>
         <br>
-        <h1 style="font-size: 60px; color: lightcoral;">ANY QUESTIONS?</h1>
+        <h1 style="font-size: 60px; color: lightcoral;">For any queries!</h1>
         <h3 style="color: white;">Explore inside our Neighbourhood!<br>Contact us any time</h3>
         <br>
         <select class="bg-blue hover:bg-blue-dark text-black font-bold py-2 px-4 rounded-full" id="grid-state">
           <option style="color:black; font-size:18px;">Get Answers</option>
           <option style="color:black; font-size:18px;">myhood@gmail.com</option>
-          <option style="color:black; font-size:18px;">Call us: (+254)708851550</option>
+          <option style="color:black; font-size:18px;">Call us: (+254)7088515750</option>
         </select>
       </div>
     </div>
